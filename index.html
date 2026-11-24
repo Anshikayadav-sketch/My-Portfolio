@@ -1,0 +1,461 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Anshika yadav | Personal Portfolio</title>
+
+<style>
+:root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #ffffff;
+    --muted: #cbd5e1;
+    --accent: #38bdf8;
+}
+
+.light {
+    --bg: #f1f5f9;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #475569;
+    --accent: #0284c7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+header {
+    background: var(--card);
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+button {
+    background: var(--accent);
+    color: #0f172a;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#menuBtn {
+    display: none;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.hero h3 {
+    color: var(--muted);
+    font-size: 22px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin: 18px 0;
+}
+
+.hero h1 span {
+    color: var(--accent);
+}
+
+.hero p {
+    color: var(--muted);
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+.btn {
+    background: var(--accent);
+    color: #0f172a;
+    padding: 13px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 75px 10%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    color: var(--accent);
+    margin-bottom: 30px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    color: var(--muted);
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+}
+
+.card {
+    background: var(--card);
+    padding: 28px 22px;
+    width: 230px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: var(--accent);
+}
+
+.card h3 {
+    color: var(--accent);
+    margin-bottom: 13px;
+}
+
+.card p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.goal {
+    max-width: 700px;
+    margin: auto;
+    background: var(--card);
+    padding: 30px;
+    border-radius: 12px;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.contact p {
+    color: var(--muted);
+    margin: 15px;
+}
+
+footer {
+    background: var(--card);
+    text-align: center;
+    padding: 22px;
+    color: var(--muted);
+}
+
+@media(max-width: 700px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    #menuBtn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        padding: 18px 0;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Anshika.</div>
+
+    <button id="menuBtn" onclick="toggleMenu()">☰ Menu</button>
+
+    <nav id="navbar">
+        <a href="#home" onclick="closeMenu()">Home</a>
+        <a href="#about" onclick="closeMenu()">About</a>
+        <a href="#education" onclick="closeMenu()">Education</a>
+        <a href="#skills" onclick="closeMenu()">Skills</a>
+        <a href="#projects" onclick="closeMenu()">Projects</a>
+        <a href="#goal" onclick="closeMenu()">Career Goal</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
+        <button id="themeBtn" onclick="toggleTheme()">Light Mode</button>
+    </nav>
+</header>
+
+<!-- HOME -->
+<div class="hero" id="home">
+
+    <h3>Hello, I'm</h3>
+
+    <h1>Anshika <span>yadav</span></span></h1>
+
+    <p>
+        B.Tech CSE Student |
+        Exploring Technology & Innovation
+    </p>
+
+    <a href="#about" class="btn">
+        Explore My Portfolio
+    </a>
+
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <h2>About Me</h2>
+
+    <p>
+        I am Anshika yadav, a Computer Science Engineering
+        student specializing in Data Science and Artificial
+        Intelligence at Shri Ramswaroop Memorial University.
+        I am passionate about technology, programming and
+        web development. I enjoy learning new skills,
+        exploring different technologies and improving
+        my problem-solving abilities.
+    </p>
+
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+
+    <h2>My Education</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>B.Tech</h3>
+
+            <p>
+                Computer Science Engineering
+                (Data Science & AI)
+            </p>
+
+            <p>
+                Shri Ramswaroop Memorial University
+            </p>
+
+            <p>
+                2nd Year | 3rd Semester
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+
+    <h2>My Skills</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>HTML</h3>
+            <p>Creating web page structures</p>
+        </div>
+
+        <div class="card">
+            <h3>CSS</h3>
+            <p>Designing and styling websites</p>
+        </div>
+
+        <div class="card">
+            <h3>JavaScript</h3>
+            <p>Learning interactive web development</p>
+        </div>
+
+        <div class="card">
+            <h3>C Programming</h3>
+            <p>Learning programming fundamentals</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+
+    <h2>My Projects</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Personal Portfolio</h3>
+
+            <p>
+                A responsive personal website to showcase
+                my education, skills and achievements.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Web Development</h3>
+
+            <p>
+                Practicing HTML, CSS and JavaScript
+                to create interactive websites.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CAREER GOAL -->
+<section id="goal">
+
+    <h2>Career Goal</h2>
+
+    <div class="goal">
+
+        I believe in continuous learning and personal growth.
+        My current goal is to explore different technologies,
+        develop strong technical skills and discover new
+        opportunities in the field of computer science.
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <h2>Contact Me</h2>
+
+    <p>Email: bahadurmention@gmail.com</p>
+    <p>Github link:https://github.com/Anshikayadav-sketch/My-Portfolio</p>
+    <p>Location: Uttar Pradesh, India</p>
+
+    <p>Thank you for visiting my portfolio!</p>
+
+</section>
+
+<footer>
+
+    <p>
+        © <span id="year"></span>
+        Anshika yadav | All Rights Reserved
+    </p>
+
+</footer>
+
+<script>
+
+// Mobile Navigation
+function toggleMenu() {
+    document.getElementById("navbar")
+    .classList.toggle("show");
+}
+
+function closeMenu() {
+    document.getElementById("navbar")
+    .classList.remove("show");
+}
+
+// Light and Dark Mode
+function toggleTheme() {
+
+    document.body.classList.toggle("light");
+
+    const button = document.getElementById("themeBtn");
+
+    if (document.body.classList.contains("light")) {
+        button.innerText = "Dark Mode";
+    } else {
+        button.innerText = "Light Mode";
+    }
+}
+
+// Automatic Current Year
+document.getElementById("year").innerText =
+    new Date().getFullYear();
+
+console.log("Welcome to Anshika yadav's Portfolio!");
+
+</script>
+
+</body>
+</html>
